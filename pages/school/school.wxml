@@ -1,0 +1,10 @@
+<!--school.wxml-->
+<view class="container">
+  123123
+</view>
+<van-tabbar active="{{ active }}" bind:change="onTapBarTapped">
+  <van-tabbar-item name="home" icon="wap-home-o">首页</van-tabbar-item>
+  <van-tabbar-item name="school" icon="home-o">院校</van-tabbar-item>
+  <van-tabbar-item name="test" icon="bookmark-o">测评</van-tabbar-item>
+  <van-tabbar-item name="user" icon="user-o">我的</van-tabbar-item>
+</van-tabbar>

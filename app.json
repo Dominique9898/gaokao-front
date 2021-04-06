@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/school/school",
+    "pages/test/test"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/school/school",
+        "iconPath": "images/icons/school.png",
+        "selectedIconPath": "images/icons/school_selected.png",
+        "text": "院校"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "iconPath": "images/icons/test.png",
+        "selectedIconPath": "images/icons/test_selected.png",
+        "text": "测评"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4bb0ff",
+    "navigationBarTitleText": "校派",
+    "navigationBarTextStyle":"white"
+  },
+  "usingComponents": {
+  },
+  "sitemapLocation": "sitemap.json"
+}
