@@ -1,0 +1,20 @@
+<!--pages/user/user.wxml-->
+<view class="userInfo">
+    <view class="userinfo_left">
+      <image class="userinfo_avatar" src="{{userInfo.avatarPath}}"></image>
+    </view>
+    <view class="userinfo_right">
+      <view style="margin:5%;">
+        <view class="userinfo_name">Dominique</view>
+        <view class="userinfo_phone" wx:if="{{!userInfo.phone}}">绑定手机号></view>
+        <view class="userinfo_phone" wx:else>{{userInfo.phone}}</view>
+      </view>
+    </view>
+</view>
+<view class="container">
+  <view class="cellBlock">
+    <van-cell custom-class="cell" size="large" title="我的收藏"  is-link />
+    <van-cell custom-class="cell" size="large" title="个人信息" icon="location-o" is-link/>
+    <van-cell custom-class="cell" size="large" title="关于我们" is-link is-link />
+  </view>
+</view>

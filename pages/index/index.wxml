@@ -62,3 +62,5 @@
     <view class="news_cell_image"></view>
   </view>
 </view>
+<!-- 解决底部tapbar盖住内容 -->
+<view style="height: 200rpx;"></view>

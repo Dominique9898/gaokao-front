@@ -1,15 +1,11 @@
 {
-  "pages":[
-    "pages/index/index",
+  "pages": [
+    "pages/user/user",
     "pages/school/school",
-    "pages/test/test"
+    "pages/measurement/measurement",
+    "pages/index/index"
   ],
   "tabBar": {
-    "custom": true,
-    "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -24,20 +20,25 @@
         "text": "院校"
       },
       {
-        "pagePath": "pages/test/test",
-        "iconPath": "images/icons/test.png",
-        "selectedIconPath": "images/icons/test_selected.png",
+        "pagePath": "pages/measurement/measurement",
+        "iconPath": "images/icons/measurement.png",
+        "selectedIconPath": "images/icons/measurement_selected.png",
         "text": "测评"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/icons/user.png",
+        "selectedIconPath": "images/icons/user_selected.png",
+        "text": "我的"
       }
     ]
   },
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4bb0ff",
     "navigationBarTitleText": "校派",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
-  "usingComponents": {
-  },
+  "usingComponents": {},
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,27 @@
+<!--pages/measurement/measurement.wxml-->
+<view class="container">
+  <view style="width:100%;height:350rpx;">
+    <image class="zheyeImg" src="../../images/zhiye.jpeg"/>
+  </view>
+  <view style="padding: 50rpx 0;">
+    <view class="title" style="padding-bottom: 50rpx">
+      <view class="mainText">专业评题</view>
+      <view class="subText">不知如何选专业?我们帮你</view>
+    </view>
+    <view class="measurements">
+      <view class="measurement" wx:for="{{measurements}}" wx:key="id">
+        <view class="left">
+          <view class="title">
+            <view class="mainText">{{item.title}}</view>
+            <view class="subText">{{item.subtitle}}</view>
+          </view>
+          <view class="button"> + </view>
+        </view>
+        <view class="right">
+          <image style="width:70rpx;height:70rpx" src="{{item.logoPath}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='result_btn'>综合结果</view>
+</view>

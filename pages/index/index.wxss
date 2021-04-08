@@ -38,7 +38,6 @@
 	flex-flow: row wrap;
 	justify-content: space-between;
   align-items: center;
-  margin: 75rpx 30rpx 30rpx 30rpx;
 }
 .menu_circleItem {
   width: 120rpx;
