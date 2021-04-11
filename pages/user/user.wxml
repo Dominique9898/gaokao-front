@@ -1,14 +1,15 @@
 <!--pages/user/user.wxml-->
 <view class="userInfo">
     <view class="userinfo_left">
-      <image class="userinfo_avatar" src="{{userInfo.avatarPath}}"></image>
+      <view class="userinfo_avatar">
+        <open-data style="width:100;height:100%" type="userAvatarUrl"></open-data>
+      </view>
     </view>
     <view class="userinfo_right">
       <view style="margin:5%;">
-        <view class="userinfo_name">Dominique</view>
-        <view class="userinfo_phone" wx:if="{{!userInfo.phone}}">绑定手机号></view>
-        <view class="userinfo_phone" wx:else>{{userInfo.phone}}</view>
-      </view>
+        <open-data type="userNickName"></open-data>
+        <view class="userinfo_phone">{{userInfo.phone}}</view>
+      </view> 
     </view>
 </view>
 <view class="container">

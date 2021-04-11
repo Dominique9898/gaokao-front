@@ -29,7 +29,7 @@
     <view class="menu_Items">
       <view 
       class="menu_squareItem" 
-      style="background-image: url('../../images/bg1.png')"
+      style="background-image: url(https://dominikcloud.ltd/images/bg1.png)"
       >
         <view class="menu_squareItem_text">
           <view>新高考</view>
@@ -38,7 +38,7 @@
       </view>
       <view 
         class="menu_squareItem"
-        style="background-image: url('../../images/bg2.jpeg')"
+        style="background-image: url(https://dominikcloud.ltd/images/bg2.jpeg)"
       >
         <view class="menu_squareItem_text">
           <view>强基计划</view>

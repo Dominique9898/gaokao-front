@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/user/user",
     "pages/school/school",
-    "pages/measurement/measurement",
-    "pages/index/index"
+    "pages/measurement/measurement"
   ],
   "tabBar": {
     "list": [
