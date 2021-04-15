@@ -2,8 +2,19 @@
 // 获取应用实例
 const app = getApp()
 const baseroot = app.globalData.baseroot
+
+import $api from '../../utils/api'
+
 Page({
+  onLoad() {
+    this.getNewsList()
+  },
   data: {
+    listQuery: {
+      page: 1,
+      limit: 20,
+    },
+    list: [],
     user_location: '浙江省',
     imgUrls: [
       baseroot+'/images/kabi1.jpeg',
@@ -31,5 +42,23 @@ Page({
     autoplay: true,
     interval: 8000,
     duration: 1800
+  },
+  getLocalUrl(file){
+    return `https://dominikcloud.ltd${file}`
+  },
+  getNewsList() {
+    let that = this
+    $api.getNewsList(this.data.listQuery)
+    .then(res => {
+      let data = res.data
+      data = data.list
+      data.forEach(item => {
+        item.img = that.getLocalUrl(item.img)
+        console.log(item.img);
+      })
+      this.setData({
+        list: data
+      })
+    })
   },
 })
