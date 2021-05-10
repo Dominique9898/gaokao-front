@@ -2,27 +2,6 @@
 import $api from './utils/api'
 App({
   onLaunch() {
-    wx.setStorageSync('token', '')
-    let session = wx.getStorageSync('token')
-    let that = this
-    if (session) {
-      wx.checkSession({
-        success: () => {
-          // session 未过期
-          console.log('session 未过期')
-          that.globalData.userInfo = wx.getStorageSync('userInfo')
-          that.globalData.login = true
-        },
-        fail: () => {
-          // 已过期
-          console.log('session 过期')
-          this.bindLogin()
-        }
-      })
-    } else {
-      console.log('session 不存在')
-      that.bindLogin()
-    }
   },
   bindLogin() {
     let that = this
@@ -45,7 +24,7 @@ App({
     $api.login(code,encryptedData,iv).then(res => {
       let data = res.data
       globalData.login = true
-      globalData.userInfo = data.userInf
+      globalData.userInfo = data.userInfo
       wx.setStorageSync('userInfo', data.userInfo)
       wx.setStorageSync('token', data.third_session)
       wx.setStorageSync('public_key', data.public_key)

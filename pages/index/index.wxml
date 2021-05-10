@@ -53,17 +53,13 @@
   <view class="news_title">
     <h2>资讯</h2>
   </view>
-  <view wx:for="{{list}}" wx:key="id">
+  <view wx:for="{{list}}" wx:key="id" wx:for="{{list}}" wx:key="id">
     <view class="news_cell">
       <view class="news_cell_title">{{item.title}}</view>
       <view class="news_cell_image">
         <image src="{{item.img}}"></image>
       </view>
     </view>
-  </view>
-  <view class="news_cell">
-    <view class="news_cell_title">123123</view>
-    <view class="news_cell_image"></view>
   </view>
 </view>
 <!-- 解决底部tapbar盖住内容 -->

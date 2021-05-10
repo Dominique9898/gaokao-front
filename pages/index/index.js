@@ -22,7 +22,7 @@ Page({
     ],
     circleItems: [
       {
-      label:'专业库',
+      label:'院校库',
       imgPath: baseroot+'/images/5t5.png'
       },
       {
@@ -50,8 +50,7 @@ Page({
     let that = this
     $api.getNewsList(this.data.listQuery)
     .then(res => {
-      let data = res.data
-      data = data.list
+      const data = res.data.list
       data.forEach(item => {
         item.img = that.getLocalUrl(item.img)
         console.log(item.img);

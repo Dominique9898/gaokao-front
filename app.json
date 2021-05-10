@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/school/school",
     "pages/index/index",
     "pages/user/user",
-    "pages/school/school",
-    "pages/measurement/measurement"
+    "pages/measurement/measurement",
+    "pages/school/allschool"
   ],
   "tabBar": {
     "list": [
@@ -36,7 +37,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4bb0ff",
-    "navigationBarTitleText": "校派",
+    "navigationBarTitleText": "智能高考",
     "navigationBarTextStyle": "white"
   },
   "usingComponents": {},

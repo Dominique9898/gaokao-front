@@ -7,7 +7,7 @@
     <image class="zheyeImg" src="https://dominikcloud.ltd/images/zexiao.jpeg"/>
   </view>
   <view class="menu_Items">
-      <view class="menu_Item" wx:for="{{icons}}" wx:key="id">
+      <view class="menu_Item" wx:for="{{icons}}" wx:key="id" bindtap="navi" data-url="{{item.url}}">
         <image class="menu_image" src="{{item.imgPath}}" />
         <view class="menu_text">{{item.label}}</view>
       </view>
@@ -15,25 +15,20 @@
 </view>
 <view class="divider"></view>
 <view class="container bottom">
-  <van-tabs active="{{schooltype[0]}}">
+  <van-tabs active="{{schooltype[0]}}" bind:change="onChange">
   <van-tab wx:for="{{schooltype}}" wx:key="id" title="{{item}}" name="{{item}}">
     <view class='school_content'>
-      <view class='school_item'>
+      <view class='school_item' wx:for="{{schoolList}}" wx:key="id" bindtap="onSchoolItemTap" data-id="{{item.id}}">
         <view style="width:100%;height:70%;">
-          <image class='school_image' src= "https://dominikcloud.ltd/images/yeqiangwei.png" />
+          <image class='school_image' src= "https://dominikcloud.ltd/{{item.icon}}" />
         </view>
         <view style="padding:10rpx 20rpx">
-          <view class="school_name"></view>
+          <view class="school_name">{{item.name}}</view>
           <view class="school_labels">
-            <van-tag round plain size="medium" type="warning">985</van-tag>
-            <van-tag round plain size="medium" type="warning">211</van-tag>
-            <van-tag round plain size="medium" type="warning">国重点</van-tag>
+            <van-tag round plain size="medium" type="warning" wx:for="{{item.tags}}" wx:key="id">{{item}}</van-tag>
           </view>
         </view>
       </view>
-      <view class='school_item'></view>
-      <view class='school_item'></view>
-      <view class='school_item'></view>
     </view>
   </van-tab>
 </van-tabs>
