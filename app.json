@@ -1,10 +1,13 @@
 {
   "pages": [
-    "pages/school/school",
+    "pages/measurement/result",
+    "pages/measurement/test",
     "pages/index/index",
-    "pages/user/user",
     "pages/measurement/measurement",
-    "pages/school/allschool"
+    "pages/school/school",
+    "pages/school/allschool",
+    "pages/user/user",
+    "pages/school/score"
   ],
   "tabBar": {
     "list": [

@@ -45,7 +45,8 @@
 }
 .school_item {
   width: 48%;
-  height: 36vh;
+  height: 40vh;
+  margin: 10rpx 0;
   border-bottom-left-radius: 20rpx;
   border-bottom-right-radius: 20rpx;
   box-shadow:0 10rpx 15rpx 0 rgba(125,126,128,.16)

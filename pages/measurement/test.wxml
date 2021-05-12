@@ -1,0 +1,7 @@
+<!--pages/measurement/test.wxml-->
+<view class='container'>
+  <view class='question_card'>
+    <view class="question_card_text">{{index+1}}: {{questionList[index].question}}</view>
+  </view>
+  <view class="anwser" wx:for="{{questionList[index].options}}" data-value="{{item}}" bindtap="onAnwserTap">{{item}}</view>
+</view>

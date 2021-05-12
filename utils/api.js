@@ -34,8 +34,46 @@ const getUniversityByType = (type) => {
     })
   })
 }
+
+const get20University = (listQuery) => {
+  return new Promise((resolve,reject) => {
+    basetool.wxRequest('/getlistUniversity', 'get', listQuery)
+    .then(res => {
+      resolve(res)
+    })
+    .catch(err => {
+      reject(err)
+    })
+  })
+}
+
+const getUniversityBySelect = (params) => {
+  return new Promise((resolve, reject) => {
+    basetool.wxRequest('/getUniversitiesbyselect', 'get', params)
+    .then(res => {
+      resolve(res)
+    })
+    .catch(err => {
+      reject(err)
+    })
+  })
+}
+const getQuestion = (params) => {
+  return new Promise((resolve, reject) => {
+    basetool.wxRequest('/getQuestions', 'get', params)
+    .then(res => {
+      resolve(res)
+    })
+    .catch(err => {
+      reject(err)
+    })
+  })
+}
 export default { // 暴露接口
   login,
   getNewsList,
-  getUniversityByType
+  getUniversityByType,
+  get20University,
+  getUniversityBySelect,
+  getQuestion
 } 

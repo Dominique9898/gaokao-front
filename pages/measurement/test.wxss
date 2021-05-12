@@ -1,0 +1,31 @@
+/* pages/measurement/test.wxss */
+Page {
+  background-image: linear-gradient(to bottom, #4faff8 , #2849f5);
+}
+.question_card {
+  margin: 10vw auto; 
+  width: 80vw;
+  height: 20vh;
+  color: white;
+  background-color: #3b85f0;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  position: relative;
+}
+.question_card_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.anwser {
+  margin: 10vw auto; 
+  width: 80vw;
+  height: 7vh;
+  background-color: white;
+  border-bottom-left-radius: 7vh;
+  border-top-right-radius: 7vh;
+  border-bottom-right-radius: 7vh;
+  line-height: 7vh;
+  text-align: center;
+}

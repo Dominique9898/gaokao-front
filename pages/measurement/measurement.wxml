@@ -9,7 +9,7 @@
       <view class="subText">不知如何选专业?我们帮你</view>
     </view>
     <view class="measurements">
-      <view class="measurement" wx:for="{{measurements}}" wx:key="id">
+      <view class="measurement" wx:for="{{measurements}}" wx:key="id" data-type="{{item.type}}" bindtap="onTestTap">
         <view class="left">
           <view class="title">
             <view class="mainText">{{item.title}}</view>

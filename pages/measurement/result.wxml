@@ -1,0 +1,3 @@
+<!--pages/measurement/result.wxml-->
+<view>您的测试结果为： {{kind}}</view>
+<view>该类型的人{{one}}</view>

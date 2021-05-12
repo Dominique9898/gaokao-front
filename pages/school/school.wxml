@@ -1,7 +1,7 @@
 <!--school.wxml-->
-<view class="search_input">
+<!-- <view class="search_input">
       <van-search shape="round" value="{{ value }}" placeholder="请输入搜索关键词" />
-</view>
+</view> -->
 <view class="container top">
   <view style="width:100%;height:60%;">
     <image class="zheyeImg" src="https://dominikcloud.ltd/images/zexiao.jpeg"/>
@@ -18,8 +18,8 @@
   <van-tabs active="{{schooltype[0]}}" bind:change="onChange">
   <van-tab wx:for="{{schooltype}}" wx:key="id" title="{{item}}" name="{{item}}">
     <view class='school_content'>
-      <view class='school_item' wx:for="{{schoolList}}" wx:key="id" bindtap="onSchoolItemTap" data-id="{{item.id}}">
-        <view style="width:100%;height:70%;">
+      <view class='school_item' wx:for="{{schoolList}}" data-id="{{item.id}}" wx:key="id" bindtap="onSchoolItemTap">
+        <view style="width:100%;height:60%;">
           <image class='school_image' src= "https://dominikcloud.ltd/{{item.icon}}" />
         </view>
         <view style="padding:10rpx 20rpx">

@@ -1,5 +1,6 @@
 export const areaList = {
   province_list: {
+    100000: '全部',
     110000: '北京市',
     120000: '天津市',
     130000: '河北省',

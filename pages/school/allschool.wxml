@@ -1,2 +1,28 @@
 <!--pages/school/allschool.wxml-->
-<text>pages/school/allschool.wxml</text>
+<!-- <view class="search_input">
+      <van-search shape="round" value="{{ value }}" placeholder="请输入搜索关键词" />
+</view> -->
+<van-dropdown-menu>
+  <van-dropdown-item id="location" title="{{ location }}">
+    <van-cell>
+      <van-area area-list="{{ areaList }}" columns-num="{{ 1 }}" bind:confirm="onLocationTap"	/>
+    </van-cell>
+  </van-dropdown-item>
+  <van-dropdown-item  bind:change="onPcTap" title="{{pc.name}}" options="{{pc.options}}" />
+  <van-dropdown-item  bind:change="onTagTap" title="{{tag.name}}" options="{{tag.options}}" />
+</van-dropdown-menu>
+<view class="container">
+  <van-row>
+    <van-col span="24" wx:for="{{schoolList}}" data-id="{{item.id}}" bindtap="onColTap">
+      <view class="col">
+        <view class='school_icon'>
+        <image src="{{item.icon}}"/>
+        </view>
+        <view class='school_desc'>
+          <view class="school_name">{{item.name}}</view>
+          <view class="school_location">{{item.city}} {{item.level}}</view>
+        </view>
+      </view>
+    </van-col>
+  </van-row>
+</view>

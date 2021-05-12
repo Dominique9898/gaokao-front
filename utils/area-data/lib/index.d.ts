@@ -1,5 +1,6 @@
 export declare const areaList: {
     province_list: {
+        100000: string;
         110000: string;
         120000: string;
         130000: string;
@@ -36,6 +37,7 @@ export declare const areaList: {
         820000: string;
     };
     city_list: {
+        100000: string;
         110100: string;
         120100: string;
         130100: string;
