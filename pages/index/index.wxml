@@ -21,7 +21,11 @@
   </swiper>
   <view class="menu">
     <view class="menu_Items">
-      <view class="menu_circleItem" wx:for="{{circleItems}}" wx:key="id">
+      <view class="menu_circleItem" 
+      wx:for="{{circleItems}}" 
+      wx:key="id" 
+      data-index="{{index}}"
+      bindtap="onCircleItemTap">
         <image class="menu_image" src="{{item.imgPath}}" mode="aspectFill"/>
         <view class="menu_text">{{item.label}}</view>
       </view>

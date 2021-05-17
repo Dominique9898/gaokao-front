@@ -1,0 +1,22 @@
+<!--pages/major/major.wxml-->
+<view class="container">
+  <view class="sidebar">
+      <view 
+        class= "{{activeKey == index ? 'sidebar-item activate' : 'sidebar-item'}}" 
+        wx:for="{{title}}" 
+        bindtap="onTabClick"
+        data-index="{{index}}" 
+        wx:key="index">
+        {{item.name}}
+      </view>
+  </view>
+  <view class="major">
+    <view class="major-item" 
+    bindtap="onMajorTap"
+    wx:for="{{majorList[activeKey].nodes}}"
+    data-major="{{item}}" 
+    >
+      {{item.name}}
+    </view>
+  </view>
+</view>

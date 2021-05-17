@@ -69,11 +69,35 @@ const getQuestion = (params) => {
     })
   })
 }
+const getMajor = () => {
+  return new Promise((resolve, reject) => {
+    basetool.wxRequest('/getmajor', 'get')
+    .then(res => {
+      resolve(res)
+    })
+    .catch(err => {
+      reject(err)
+    })
+  })
+}
+const getRecommendUniversity = (params) => {
+  return new Promise((resolve, reject) => {
+    basetool.wxRequest('/getrecommenduniversity', 'get', params)
+    .then(res => {
+      resolve(res)
+    })
+    .catch(err => {
+      reject(err)
+    })
+  })
+}
 export default { // 暴露接口
   login,
   getNewsList,
   getUniversityByType,
   get20University,
   getUniversityBySelect,
-  getQuestion
+  getQuestion,
+  getMajor,
+  getRecommendUniversity
 } 

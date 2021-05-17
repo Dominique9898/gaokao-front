@@ -1,0 +1,29 @@
+/* pages/major/singlemajor.wxss */
+.major-info {
+  width: 100vw;
+  height: 10vh;
+  background-color: lightgreen;
+  padding: 10vh 5vh 10vh 5vh;
+}
+.major-name {
+  font-size: 24px;
+  color: white
+}
+.major-code {
+  margin-top: 1vh;
+  font-size: 14px;
+}
+.major-subject {
+  width: 100vw;
+  height: 90vh;
+}
+.major-subject-title {
+  text-align: center;
+  width: 145rpx;
+  border-bottom: 5px solid lightgreen
+}
+.major-subject-desc {
+  width: 100vw;
+  margin-top: 2vh;
+  font-size: 14px;
+}

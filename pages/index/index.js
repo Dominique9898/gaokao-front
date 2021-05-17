@@ -23,19 +23,23 @@ Page({
     circleItems: [
       {
       label:'院校库',
-      imgPath: baseroot+'/images/5t5.png'
+      imgPath: baseroot+'/images/5t5.png',
+      url: '/pages/school/allschool'
       },
       {
-        label:'职业库',
-        imgPath: baseroot+'/images/huzi.png'
+        label:'专业库',
+        imgPath: baseroot+'/images/huzi.png',
+        url: '/pages/major/major',
       }, 
       {
         label:'录取概率',
         imgPath: baseroot+'/images/megumi.png',
+        url: '/pages/recommend/recommend',
       },
       {
         label:'本科优选',
         imgPath: baseroot+'/images/yeqiangwei.png',
+        url: '/pages/school/allschool'
       }
   ],
     indicatorDots: true,
@@ -60,4 +64,11 @@ Page({
       })
     })
   },
+  onCircleItemTap(e) {
+    console.log(e)
+    const index = e.currentTarget.dataset.index
+    wx.navigateTo({
+      url: this.data.circleItems[index].url,
+    })
+  }
 })

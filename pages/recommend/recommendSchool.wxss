@@ -1,0 +1,18 @@
+/* pages/recommend/recommendSchool.wxss */
+/* pages/measurement/test.wxss */
+.question_card {
+  margin: 10vw auto; 
+  width: 80vw;
+  height: 20vh;
+  color: white;
+  background-color: #3b85f0;
+  border-top-right-radius: 10vh;
+  border-bottom-left-radius: 10vh;
+  position: relative;
+}
+.question_card_title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

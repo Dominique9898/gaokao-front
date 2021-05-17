@@ -1,13 +1,17 @@
 {
   "pages": [
-    "pages/measurement/result",
-    "pages/measurement/test",
     "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/major/major",
+    "pages/measurement/test",
+    "pages/measurement/result",
     "pages/measurement/measurement",
     "pages/school/school",
     "pages/school/allschool",
     "pages/user/user",
-    "pages/school/score"
+    "pages/school/score",
+    "pages/major/singlemajor",
+    "pages/recommend/recommendSchool"
   ],
   "tabBar": {
     "list": [

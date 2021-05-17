@@ -1,3 +1,8 @@
 <!--pages/measurement/result.wxml-->
-<view>您的测试结果为： {{kind}}</view>
-<view>该类型的人{{one}}</view>
+<view class="container">
+  <ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
+</view>
+<view style="text-align: center;color:gray">您的测试结果为: 
+  <view style="color:green">{{kind}}</view>
+</view>
+<view style="color:lightgray">该类型的人{{one}}</view>

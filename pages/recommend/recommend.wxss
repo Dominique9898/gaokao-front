@@ -1,0 +1,55 @@
+/* pages/recommend/recommend.wxss */
+.score {
+  position: relative;
+  margin: 10px 20px 10px 20px;
+  height: 250rpx;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.location {
+  margin: 5px 20px 10px 20px;
+  padding: 20px 10px 20px 20px;
+  height: 660rpx;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.location-checkboxs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.location-checkbox {
+  padding: 2rpx 20rpx;
+  width: 160rpx;
+}
+.score-input {
+  display: flex;
+  height: 40px;
+  margin: 20px;
+  width: 500rpx;
+  border: 3rpx solid #faca82;
+  border-radius: 10rpx;
+  background-color: white;
+}
+.score-input > input {
+  margin:  auto 10px;
+}
+.type {
+  margin: 5px 20px 10px 20px;
+  padding: 20px 10px 20px 20px;
+  height: 100rpx;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.btn {
+  position: relative;
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  background-color: #57cc86;
+  border-radius: 100rpx;
+  left: 50%;
+  transform: translate(-50%);
+}

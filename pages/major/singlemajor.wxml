@@ -1,0 +1,11 @@
+<!--pages/major/singlemajor.wxml-->
+<view class="container">
+  <view class="major-info">
+    <view class="major-name">{{name}}</view>
+    <view class="major-code">专业代码: {{id}}</view>
+  </view>
+  <view class="major-subject">
+    <view class="major-subject-title">基本课程</view>
+    <view class="major-subject-desc">{{desc}}</view>
+  </view>
+</view>

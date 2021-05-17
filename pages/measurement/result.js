@@ -1,36 +1,104 @@
 // pages/measurement/result.js
+import * as echarts from '../ec-canvas/echarts'
+let chart = null
+let score = null
+function initChart(canvas, width, height, dpr) {
+  chart = echarts.init(canvas, null, {
+    width: width,
+    height: height,
+    devicePixelRatio: dpr // new
+  });
+  console.log('2', chart)
+  const option = getOption(score)
+  chart.setOption(option)
+  canvas.setChart(chart);
+  return chart;
+}
+function getOption(score) {
+  let option = {
+    backgroundColor: "#ffffff",
+    xAxis: {
+      show: false
+    },
+    yAxis: {
+      show: false
+    },
+    radar: {
+      // shape: 'circle',
+      indicator: [{
+        name: '常规型',
+        max:  100
+      },
+      {
+        name: '艺术型',
+        max: 100
+      },
+      {
+        name: '社会型',
+        max: 100
+      },
+      {
+        name: '企业型',
+        max: 100
+      },
+      {
+        name: '研究型',
+        max: 100
+      },
+      {
+        name: '现实型',
+        max: 100
+      }
+      ]
+    },
+    series: [{
+      type: 'radar',
+      data: [score]
+    }]
+  };
+  return option
+}
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    kind: '现实型',
+    kind: '',
     xianshixing: 0,
     yanjiuxing: 0,
     yishuxing: 0,
     shehuixing: 0,
     qiyexing: 0,
     changguixing: 0,
-    one: '喜欢现实性的实在的工作，如机械维修、木匠活、烹饪、电气技术、管子工、电工、机械工、摄影师、制图员等。这类人通常具有机械技能和体力，喜欢户外工作，乐于使用各种工具和机器设备。这种人喜欢同事务而不是人打交道的工作。他们真诚、谦逊、敏感、务实、朴素、节俭、腼腆。',
+    ec: {
+      onInit: initChart
+    },
+    one: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(options)
-    // this.setData({
-    //   xianshixing: options.xianshixing,
-    //   yanjiuxing: options.yanjiuxing,
-    //   yishuxing: options.yishuxing,
-    //   shehuixing: options.shehuixing,
-    //   qiyexing: options.qiyexing,
-    //   changguixing: options.changguixing,
-    // })
-    // this.setData({
-    //   kind:this.whichkind()
-    // })
+    this.setData({
+      xianshixing: options.xianshixing * 10,
+      yanjiuxing: options.yanjiuxing * 10,
+      yishuxing: options.yishuxing * 10,
+      shehuixing: options.shehuixing * 10,
+      qiyexing: options.qiyexing * 10,
+      changguixing: options.changguixing * 10,
+    })
+    const kind = this.whichkind()
+    const one = this.data.one
+    this.setData({
+      kind
+    })
+    wx.setStorageSync('interests', {
+      type: kind,
+      desc: one
+    })
+    score = [this.data.changguixing, this.data.yishuxing, this.data.shehuixing, this.data.qiyexing, this.data.yanjiuxing, this.data.xianshixing]
   },
   whichkind: function () {
     if (this.data.xianshixing >= this.data.yanjiuxing && this.data.xianshixing >= this.data.yishuxing && this.data.xianshixing >= this.data.shehuixing && this.data.xianshixing >= this.data.qiyexing && this.data.xianshixing >= this.data.changguixing) {

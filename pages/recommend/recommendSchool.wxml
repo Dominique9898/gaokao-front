@@ -1,0 +1,11 @@
+<!--pages/recommend/recommendSchool.wxml-->
+<view class='container'>
+  <view class='question_card' wx:for="{{schoolList}}" wx:key="index">
+    <view class="question_card_title">
+      {{item.name}}
+      <view>2020最低分:{{item.score['2020']}}</view>
+      <view>2019最低分:{{item.score['2019']}}</view>
+      <view>2018最低分:{{item.score['2018']}}</view>
+    </view>
+  </view>
+</view>

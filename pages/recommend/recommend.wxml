@@ -1,0 +1,26 @@
+<!--pages/recommend/recommend.wxml-->
+<view class="container">
+  <view class="score">
+    <view style="position:absolute;margin: 20px 10px 10px 20px">高考总分:<label
+        style="font-size:12px; color:gray">(仅支持浙江)</label></view>
+    <view class="score-input" style="position:absolute;top:40px">
+      <input value="{{score}}" bindchange='synchroValue'/>
+    </view>
+  </view>
+  <view class="location">
+    <view>志愿院校地区:</view>
+    <checkbox-group class="location-checkboxs" bindchange="checkboxChange">
+      <label wx:for="{{province}}" wx:key="id" class="location-checkbox">
+        <checkbox value="{{ item }}">{{item}}</checkbox>
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="type">
+    <view>志愿院校类型:</view>
+    <van-radio-group value="{{ radio }}" bind:change="onTypeChange" direction="horizontal">
+      <van-radio name="1">公立</van-radio>
+      <van-radio name="2">民办</van-radio>
+    </van-radio-group>
+  </view>
+  <view class="btn" bindtap="onConfirm">确定</view>
+</view>
